@@ -6,6 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omolo</title>
     <link rel="stylesheet" href="./style.css" type="text/css" />
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+                animation: {
+                  sideways: "sideways 3s linear infinite",
+                },
+                keyframes: {
+                  sideways: {
+                    "0%, 100%": { left: "0", top: "0" },
+                    "50%": { left: "100px", top: "0" },
+                  },                 
+                },
+            },
+        },
+    };
+    </script>
   </head>
   <body>
     <!--
@@ -20,8 +37,9 @@
 
     </div>
     
-    <!-- <div class="mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10 justify-center"> -->
-    <div class="mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5  justify-center">
+    <div class="mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">
+    <div class="animate-sideways">text slide test</div>
+
       
       <h1 class="text-slate-600 font-semibold text-lg">Harnessing AI to modernize regulatory compliance</h1>
     
@@ -40,6 +58,7 @@
       <h1 class="text-slate-600 font-semibold text-lg">Modern Integrated solution</h1>
     
     </div>
+
 
   </body>
 </html>
