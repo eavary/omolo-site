@@ -12,19 +12,24 @@
             extend: {
                 animation: {
                   sideways: "sideways 3s linear infinite",
+                  fade: 'fadeOut 5s ease-in-out',  
                 },
                 keyframes: {
                   sideways: {
                     "0%, 100%": { left: "0", top: "0" },
                     "50%": { left: "100px", top: "0" },
-                  },                 
+                  },{
+                  fadeOut: {
+                    '0%': { backgroundColor: theme('colors.red.300') },
+                    '100%': { backgroundColor: theme('colors.transparent') },
+                  },      
                 },
+              },
             },
-        },
-    };
+          };
     </script>
   </head>
-  <body>
+  <body class="dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
     <!--
     Omolo
     Harnessing AI to modernize regulatory compliance
@@ -34,10 +39,10 @@
     <div class="flex mt-20 justify-center items-center">
       <img class="w-xs" src="omolo-logotype-type-only.svg">
     </div>
-   
-    <div class="animate-sideways">text slide test</div>
 
-    <div class="mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">
+    <div class="animation-sideways w-md outline m-4 p-4 rounded-xl">text slide test</div>
+
+    <div class="animation-fade mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">
       <h1 class="text-slate-600 font-semibold text-lg">Harnessing AI to modernize regulatory compliance</h1>
     </div>
     
