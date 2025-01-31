@@ -2,33 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omolo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" type="text/css" />
-    <script>
-        tailwind.config = {
-        theme: {
-            extend: {
-                animation: {
-                  sideways: "sideways 3s linear infinite",
-                  fade: 'fadeOut 5s ease-in-out',  
-                },
-                keyframes: {
-                  sideways: {
-                    "0%, 100%": { left: "0", top: "0" },
-                    "50%": { left: "100px", top: "0" },
-                  },{
-                  fadeOut: {
-                    '0%': { backgroundColor: theme('colors.red.300') },
-                    '100%': { backgroundColor: theme('colors.transparent') },
-                  },      
-                },
-              },
-            },
-          };
-    </script>
   </head>
+
   <body class="dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
     <!--
       Omolo
@@ -37,24 +16,60 @@
       Modern Integrated solution
     -->
     
-    <div class="flex mt-20 justify-center items-center">
+    <div id="logo" class="flex mt-20 justify-center items-center opacity-0">
       <img class="w-xs" src="omolo-logotype-type-only.svg">
     </div>
 
-    <div class="animation-sideways w-md outline m-4 p-4 rounded-xl">text slide test</div>
-
-    <div class="animation-fade mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">
+    <div id="one" class="opacity-0 mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">
       <h1 class="text-slate-600 font-semibold text-lg">Harnessing AI to modernize regulatory compliance</h1>
     </div>
     
-    <div class="mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">
+    <div id="two" class="opacity-0 mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">
       <h1 class="text-slate-600 font-semibold text-lg">The only AI solution built by industry experts</h1>
     </div>
 
-    <div class="mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">  
+    <div id="three" class="opacity-0 mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">  
       <h1 class="text-slate-600 font-semibold text-lg">Modern Integrated solution</h1>
     </div>
 
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const logo = document.getElementById('logo')
+        const one = document.getElementById('one')
+        const two = document.getElementById('two')
+        const three = document.getElementById('three')
 
+        // logo
+        logo.classList.add('animate-fadeIn')
+        logo.addEventListener('animationend', () => {
+          logo.classList.remove('opacity-0')
+
+          // one
+          setTimeout(() => {
+            one.classList.add('animate-fadeIn')
+            one.addEventListener('animationend', () => {
+              one.classList.remove('opacity-0', 'animate-fadeIn')
+  
+              // two
+              setTimeout(() => {
+                two.classList.add('animate-fadeIn')
+                two.addEventListener('animationend', () => {
+                  two.classList.remove('opacity-0', 'animate-fadeIn')
+                })
+  
+                // three
+                setTimeout(() => {
+                  three.classList.add('animate-fadeIn')
+                  three.addEventListener('animationend', () => {
+                    three.classList.remove('opacity-0', 'animate-fadeIn')
+                  })
+                }, 700)
+  
+              }, 700)
+            })
+          }, 700)
+        })
+      })
+    </script>
   </body>
 </html>

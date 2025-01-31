@@ -11,4 +11,48 @@
       transform: rotate(3deg);
     }
   }
+
+  --animate-fadeIn: fadeIn 0.5s ease-in-out;
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  --animate-fadeOut: fadeOut 0.5s ease-in-out;
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  --animate-slideUp: slideUp 1s ease-in-out;
+  @keyframes slideUp {
+    0% {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  --animate-slideLeft: slideLeft 1s ease-in-out;
+  @keyframes slideLeft {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+  }
 }
