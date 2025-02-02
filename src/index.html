@@ -8,29 +8,41 @@
     <link rel="stylesheet" href="./style.css" type="text/css" />
   </head>
 
-  <body class="dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
-    <!--
-      Omolo
-      Harnessing AI to modernize regulatory compliance
-      The only AI solution built by industry experts
-      Modern Integrated solution
-    -->
+  <!-- <body class="dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10"> -->
+  <body class="">
     
     <div id="logo" class="flex mt-20 justify-center items-center opacity-0">
+      <!-- TODO: if we want this to type reveal it needs to be text-->
       <img class="w-xs" src="omolo-logotype-type-only.svg">
     </div>
 
-    <div id="one" class="opacity-0 mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">
-      <h1 class="text-slate-600 font-semibold text-lg">Harnessing AI to modernize regulatory compliance</h1>
+    <div id="one" class="mx-auto my-auto mt-10 flex items-center gap-x-4 justify-center">
+      
+      <!-- <div class="text-slate-600 font-semibold text-lg"> -->
+        <!-- 'AI' grows and then shrinks to normal size -->
+        <!-- Harnessing to modernize automotive regulatory compliance -->
+      <!-- </div> -->
     </div>
     
-    <div id="two" class="opacity-0 mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">
-      <h1 class="text-slate-600 font-semibold text-lg">The only AI solution built by industry experts</h1>
+    <div id="two" class="mx-auto my-auto mt-10 flex items-center gap-x-4 justify-center">
+      <!-- <div class="text-slate-600 font-semibold text-lg"> -->
+        <!-- 'obvious' grows and then shrinks to normal size -->
+        <!-- Making complex automotive regulations obvious -->
+      <!-- </div> -->
     </div>
 
-    <div id="three" class="opacity-0 mx-auto my-auto mt-10 flex max-w-lg items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 justify-center">  
-      <h1 class="text-slate-600 font-semibold text-lg">Modern Integrated solution</h1>
+    <div id="three" class="mx-auto my-auto mt-10 flex items-center gap-x-4 justify-center">
+      <!-- <div class="text-slate-600 font-semibold text-lg"> -->
+        <!-- 'only' grows and then shrinks to normal size -->
+        <!-- The only AI solution built by automotive industry experts -->
+      <!-- </div> -->
     </div>
+
+    <div id="tagline" class="my-10 mx-60 flex items-center gap-x-4 justify-center">
+      Modernize compliance, otimize capital, and unleash your teams potential with Omolo’s AI powered SaaS platform.
+    </div>
+
+
 
     <script>
       document.addEventListener('DOMContentLoaded', () => {
@@ -38,6 +50,7 @@
         const one = document.getElementById('one')
         const two = document.getElementById('two')
         const three = document.getElementById('three')
+        const tagline = document.getElementById('tagline')
 
         // logo
         logo.classList.add('animate-fadeIn')
@@ -45,31 +58,52 @@
           logo.classList.remove('opacity-0')
 
           // one
-          setTimeout(() => {
-            one.classList.add('animate-fadeIn')
-            one.addEventListener('animationend', () => {
-              one.classList.remove('opacity-0', 'animate-fadeIn')
+          // setTimeout(() => {
+          //   one.classList.add('animate-fadeIn')
+          //   one.addEventListener('animationend', () => {
+          //     one.classList.remove('opacity-0', 'animate-fadeIn')
   
-              // two
-              setTimeout(() => {
-                two.classList.add('animate-fadeIn')
-                two.addEventListener('animationend', () => {
-                  two.classList.remove('opacity-0', 'animate-fadeIn')
-                })
+          //     // two
+          //     setTimeout(() => {
+          //       two.classList.add('animate-fadeIn')
+          //       two.addEventListener('animationend', () => {
+          //         two.classList.remove('opacity-0', 'animate-fadeIn')
+          //       })
   
-                // three
-                setTimeout(() => {
-                  three.classList.add('animate-fadeIn')
-                  three.addEventListener('animationend', () => {
-                    three.classList.remove('opacity-0', 'animate-fadeIn')
-                  })
-                }, 700)
+          //       // three
+          //       setTimeout(() => {
+          //         three.classList.add('animate-fadeIn')
+          //         three.addEventListener('animationend', () => {
+          //           three.classList.remove('opacity-0', 'animate-fadeIn')
+          //         })
+          //       }, 700)
   
-              }, 700)
-            })
-          }, 700)
+          //     }, 700)
+          //   })
+          // }, 700)
         })
       })
+
+      const createAnimatedText = (text) => {
+        const div = document.createElement('div')
+        div.className = 'overflow-hidden font-bold leading-6 text-gray-800'
+
+        text.split('').forEach((char, index) => {
+          const span = document.createElement('span')
+          span.className = 'animate-text-reveal inline-block'
+          span.style.animationFillMode = 'backwards'
+          span.style.animationDelay = `${index * 0.05}s`
+          span.textContent = char === ' ' ? '\u00A0' : char
+          div.appendChild(span)
+        })
+        return div
+      }
+      const textOne = 'Harnessing to modernize automotive regulatory compliance'
+      const textTwo = 'Making complex automotive regulations obvious'
+      const textThree = 'The only AI solution built by automotive industry experts'
+      one.appendChild(createAnimatedText(textOne))
+      two.appendChild(createAnimatedText(textTwo))
+      three.appendChild(createAnimatedText(textThree))
     </script>
   </body>
 </html>

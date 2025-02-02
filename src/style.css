@@ -55,4 +55,39 @@
       opacity: 0;
     }
   }
+
+  --animate-bulge: bulge 0.5s ease-in-out infinite;
+  @keyframes bulge {
+    0%,
+    100% {
+      transform: scale(3); 
+    }
+    50% {
+      transform: scale(1.3);
+    }
+  }
+
+  --animate-reveal: reveal 0.1s cubic-bezier(0.77, 0, 0.175, 1) 0.1s;
+  @keyframes reveal {
+    0% {
+      transform: translate(0, 100%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+}
+
+
+h1 {
+  overflow: hidden;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+span {
+  display: inline-block;
+  animation: reveal 0.2s cubic-bezier(0.77, 0, 0.175, 1) 0.2s;
+  animation-fill-mode: backwards;
 }
