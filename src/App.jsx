@@ -43,45 +43,20 @@ function App() {
 
     return () => clearInterval(typingInterval)
   }, [currentMessageIndex, isTyping])
-
+  
+  /* Animated Messages Container */
   return (
-    <div className="min-h-screen bg-white flex flex-col items-center px-4 py-12">
-      
-      <header className="flex items-center justify-center bg-white py-4">
-        {/* Logo */}
-        <img src={omoloLogo} className="w-60" alt="Omolo Logo" />
-      </header>
-      
-      {/* Animated Messages Container */}
-      <div className="w-full max-w-2xl mb-8">
-        <div className="flex flex-col gap-2">
-          {displayTexts.map((text, index) => (
-            <div key={index} className="h-8 flex items-center">
-              <p className="text-2xl text-gray-700">
-                {text}
-                {index === currentMessageIndex && isTyping && (
-                  <span className="animate-pulse">|</span>
-                )}
-              </p>
-            </div>
-          ))}
+    <div className="flex flex-col gap-2">
+      {displayTexts.map((text, index) => (
+        <div key={index} className="h-8 flex">
+          <p className="text-lg text-gray-700">
+            {text}
+            {index === currentMessageIndex && isTyping && (
+              <span className="animate-pulse">|</span>
+            )}
+          </p>
         </div>
-      </div>
-
-      {/* Tagline */}
-      <div className="mb-16">
-        <p className="text-xl text-gray-600 max-w-2xl text-center">
-          Modernize compliance, otimize capital, and unleash your teams potential with Omolo's AI powered SaaS platform.
-        </p>
-      </div>
-
-      {/* Contact */}
-      <a href="mailto:info@omoloai.com">
-        <div className="flex flex-col justify-center items-center gap-2 hover:opacity-60">
-          <div className="text-lg text-gray-700 font-[500]">Talk to us</div>
-          <img src={omoloLogoSmall} className="w-8" alt="Omolo Logo" />
-        </div>
-      </a>
+      ))}
     </div>
   )
 }
