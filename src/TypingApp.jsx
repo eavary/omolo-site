@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react'
-import omoloLogo from './assets/omolo-logotype-type-only.svg'
-import omoloLogoSmall from './assets/omolo-logo-small.svg'
 
-function App() {
+function TypingApp() {
   const messages = [
     'Harnessing AI to modernize automotive regulatory compliance',
     'Making complex automotive regulations obvious',
@@ -61,4 +59,4 @@ function App() {
   )
 }
 
-export default App
+export default TypingApp
