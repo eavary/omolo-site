@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./assets/omolo-logo-small.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omolo</title>
+    <link rel="stylesheet" href="./index.css" type="text/css" />
+  </head>
+  <body>
+    <div class="min-h-screen bg-white flex flex-col mx-auto px-4 py-12">
+      <div class="w-full mb-8 min-w-[800px]">
+
+        <header class="flex items-center justify-center bg-white py-4">
+          <!-- Logo -->
+          <img src="./assets/omolo-logotype-type-only.svg" width="240" class="w-60" alt="Omolo Logo" />
+        </header>
+
+        <!-- tagline -->
+        <div class="mt-0 text-center text-lg">
+          Omolo. Shortcut to compliance.<br />
+          Indispensable to ensuring obligations are met.
+        </div>
+
+        <!-- animated conversation container-->
+        <div class="flex flex-col gap-2">
+          <div class="chat-container mt-3 mb-4 p-8 max-w-[800px]">
+            <div class="messages min-h-20" id="messages"></div>
+          </div>
+          <div class="input-container px-10 pb-10">
+            <input type="text" class="chat-input" placeholder="Enter prompt" id="chatInput" readOnly></input>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="flex justify-center">
+          <a href="mailto:info@omoloai.com" class="flex flex-col justify-center items-center gap-2 hover:opacity-60">
+            <div class="text-lg text-gray-700 font-[500]">Talk to us</div>
+            <img src="./assets/omolo-logo-small.svg" width="32" class="w-8" alt="Omolo Logo" />
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./animatedConversation.js"></script>
+  </body>
+</html>
