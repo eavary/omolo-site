@@ -1,20 +1,26 @@
 
 const conversation = [
-  // {
-  //     question: "What is omolo?",
-  //     answer: "Omolo is the only AI powered SaaS platform built by industry experts, modernizing Automotive regulatory compliance"
-  // },
-  {
-      question: "What value does Omolo provide?",
-      answer: "Faster time to market. Mitigate risks. Avoid costly mistakes. More efficient use of personnel. Better use of capital."
-  },
   {
       question: "How does Omolo work?",
-      answer: "Omolo harnesses AI to get information faster and applies agentic technologies to automate critical business to business processes tied to engineering decisions, ensuring regulatory objectives are never missed over time and between department hand offs."
+      answer: `Omolo harnesses Al to transform complex regulations into clear, actionable 
+        insights—slashing review time, supercharging collaborations, and speeding 
+        development cycles.`
+  },
+  {
+    question: "What does this mean for my team?",
+    answer: `Omolo’s AI-powered tools empower:
+      <ul class="list-disc list-inside">
+        <li>Leaders to spot and eliminate risks before they impact timelines</li>
+        <li>Designers to build compliance into concepts from day one</li>
+        <li>Engineers to stay ahead of regulatory changes automatically</li>
+        <li>Compliance teams to manage global products simultaneously</li>
+      </ul>`
   },
   {
       question: "Why Omolo?",
-      answer: "Omolo gets to the heart of what matters -- fostering collaboration and increasing transparency while providing audit capabilities."
+      answer: `Omolo gets to the heart of what matters -- accelerating time to market, 
+        reducing compliance risks, boosting product innovation. Omolo’s AI-powered solutions 
+        streamline automotive regulatory compliance, giving you a competitive edge.`
   }
 ]
 
@@ -48,7 +54,7 @@ function createMessage(text, isUser) {
   } else {
     messageDiv.classList.add('assistant-message')
   }
-  messageDiv.textContent = text
+  messageDiv.innerHTML = text
   messageWrapper.appendChild(messageDiv)
   messagesContainer.appendChild(messageWrapper)
 
@@ -62,7 +68,7 @@ function createMessage(text, isUser) {
 }
 
 async function animateConversation() {
-  await sleep(1000);
+  await sleep(3000);
 
   for (const [index, exchange] of conversation.entries()) {
       // Type the question
