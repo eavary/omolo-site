@@ -12,7 +12,10 @@
     <main>
       <section>
 
-        <div class="mb-8 min-w-[800px] mx-auto">
+        <div class="mb-8 
+        min-w-[400px] 
+        md:min-w-[800px]
+        mx-auto">
 
           <header class="flex items-center justify-center py-3">
             <!-- Logo -->
@@ -26,10 +29,20 @@
 
           <!-- animated conversation container-->
           <div class="flex flex-col gap-2">
-            <div class="chat-container mt-3 mb-4 p-8 max-w-[800px] bg-white">
-              <div class="messages min-h-20" id="messages"></div>
+            <div id="conversation-wrapper" class="mt-3 mb-4 p-3 bg-white rounded-lg shadow-lg w-full 
+              max-w-[500px] 
+              md:max-w-[600px] 
+              lg:max-w-[8000px]
+              mx-auto"
+            >
+              <div id="chat-container" class="p-2 w-full">
+                <div id="messages-container">
+                  <div class="message-wrapper flex"><div class="message user-message visible">What is omolo?</div></div>
+                  <div class="message-wrapper flex"><div class="message assistant-message visible">Omolo is the only AI powered SaaS platform built by industry experts, modernizing Automotive regulatory compliance</div></div>
+                </div>
+              </div>
             </div>
-            <div class="input-container px-30 pb-10">
+            <div class="input-container w-full text-center mx-auto px-16 md:px-30 pb-10">
               <input type="text" class="chat-input bg-white" placeholder="Enter prompt" id="chatInput" readonly></input>
             </div>
           </div>

@@ -2,42 +2,95 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/omolo-logo-small.svg" />
+    <link rel="icon" type="image/svg+xml" href="./assets/omolo-logo-small-fGXgGbZa.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Omolo</title>
-    <script type="module" crossorigin src="/assets/index-jqd5Rexf.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-DX5fiO9_.css">
+    <link rel="stylesheet" crossorigin href="./assets/index-DJfAi2Qm.css">
   </head>
   <body>
-    <div class="min-h-screen bg-white flex flex-col mx-auto px-4 py-12">
-      
-      <div class="w-full max-w-2xl mb-8">
 
-        <header class="flex items-center justify-center bg-white py-4">
-          <!-- Logo -->
-          <img src="/omolo-logotype-type-only.svg" class="w-60" alt="Omolo Logo" />
-        </header>
+    <main>
+      <section>
 
-        <!-- react typing app -->
-        <div id="typing-app"></div>
+        <div class="mb-8 
+        min-w-[400px] 
+        md:min-w-[800px]
+        mx-auto">
 
-        <!-- Tagline -->
-        <div class="mb-16">
-          <p class="text-xl text-gray-600 max-w-2xl text-center">
-            Modernize compliance, otimize capital, and unleash your teams potential with Omolo's AI powered SaaS platform.
-          </p>
+          <header class="flex items-center justify-center py-3">
+            <!-- Logo -->
+            <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='UTF-8'?%3e%3csvg%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%201069.08%20348.39'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23f7931e;}%3c/style%3e%3c/defs%3e%3cpath%20class='cls-1'%20d='M87.1,172.53C38.99,172.53,0,211.52,0,259.63s38.99,87.1,87.1,87.1,87.1-38.99,87.1-87.1-38.99-87.1-87.1-87.1ZM87.1,305.99c-25.6,0-46.36-20.76-46.36-46.36s20.76-46.36,46.36-46.36,46.36,20.76,46.36,46.36-20.76,46.36-46.36,46.36Z'/%3e%3cpath%20class='cls-1'%20d='M664.64,174.19c-48.1,0-87.1,38.99-87.1,87.1s38.99,87.1,87.1,87.1,87.1-38.99,87.1-87.1-38.99-87.1-87.1-87.1ZM664.64,307.65c-25.6,0-46.36-20.76-46.36-46.36s20.76-46.36,46.36-46.36,46.36,20.76,46.36,46.36-20.76,46.36-46.36,46.36Z'/%3e%3cpath%20class='cls-1'%20d='M981.98,170.22c-48.1,0-87.1,38.99-87.1,87.1s38.99,87.1,87.1,87.1,87.1-38.99,87.1-87.1-38.99-87.1-87.1-87.1ZM981.98,303.68c-25.6,0-46.36-20.76-46.36-46.36s20.76-46.36,46.36-46.36,46.36,20.76,46.36,46.36-20.76,46.36-46.36,46.36Z'/%3e%3crect%20class='cls-1'%20x='799.54'%20width='47.85'%20height='346.72'/%3e%3cpath%20class='cls-1'%20d='M529.69,259.63c0-48.1-38.99-87.1-87.1-87.1-26.79,0-50.75,12.1-66.73,31.13-15.98-19.03-39.94-31.13-66.73-31.13-48.1,0-87.1,38.99-87.1,87.09h0v87.1h40.74v-87.09c0-25.6,20.76-46.36,46.36-46.36s46.36,20.76,46.36,46.36h0v87.1h40.74v-87.1c0-25.6,20.76-46.36,46.36-46.36s46.36,20.76,46.36,46.36v87.1h40.74v-87.1h0Z'/%3e%3c/svg%3e" width="240" class="w-60" alt="Omolo Logo" />
+          </header>
+
+          <!-- tagline -->
+          <div class="mt-0 text-center text-lg font-medium text-white">
+            Master automotive regulations and compliance with intelligent precision
+          </div>
+
+          <!-- animated conversation container-->
+          <div class="flex flex-col gap-2">
+            <div id="conversation-wrapper" class="mt-3 mb-4 p-3 bg-white rounded-lg shadow-lg w-full 
+              max-w-[500px] 
+              md:max-w-[600px] 
+              lg:max-w-[8000px]
+              mx-auto"
+            >
+              <div id="chat-container" class="p-2 w-full">
+                <div id="messages-container">
+                  <div class="message-wrapper flex"><div class="message user-message visible">What is omolo?</div></div>
+                  <div class="message-wrapper flex"><div class="message assistant-message visible">Omolo is the only AI powered SaaS platform built by industry experts, modernizing Automotive regulatory compliance</div></div>
+                </div>
+              </div>
+            </div>
+            <div class="input-container w-full text-center mx-auto px-16 md:px-30 pb-10">
+              <input type="text" class="chat-input bg-white" placeholder="Enter prompt" id="chatInput" readonly></input>
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="flex justify-center">
+            <a href="mailto:info@omoloai.com" class="flex flex-col justify-center items-center gap-2 hover:opacity-60">
+              <div class="text-lg text-white font-[500]">Talk to us</div>
+              <img src="data:image/svg+xml,%3csvg%20id='Layer_1'%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%20174.2%20174.2'%3e%3cdefs%3e%3cstyle%3e.cls-1{fill:%23f7931e;}%3c/style%3e%3c/defs%3e%3cpath%20class='cls-1'%20d='M87.1,0C38.99,0,0,38.99,0,87.1s38.99,87.1,87.1,87.1,87.1-38.99,87.1-87.1S135.21,0,87.1,0ZM87.1,130.46c-25.6,0-46.36-20.76-46.36-46.36s20.76-46.36,46.36-46.36,46.36,20.76,46.36,46.36S112.7,130.46,87.1,130.46Z'/%3e%3c/svg%3e" width="32" class="w-8" alt="Omolo Logo" />
+            </a>
+          </div>
         </div>
 
-        <!-- Contact -->
-        <a href="mailto:info@omoloai.com">
-          <div class="flex flex-col justify-center items-center gap-2 hover:opacity-60">
-            <div class="text-lg text-gray-700 font-[500]">Talk to us</div>
-            <img src="/omolo-logo-small.svg" class="w-8" alt="Omolo Logo" />
+      </section>
+      <section>
+
+        <div class="mb-8 min-w-[800px] mx-auto">
+
+          <!-- title -->
+           <h1 class="text-4xl font-bold text-center mb-4">About us</h1>
+
+          <!-- tagline -->
+          <div class="mt-0 text-center text-lm font-medium text-gray-700">
+            Led by industry experts
           </div>
-        </a>
 
-      </div>
-    </div>
+          <!-- portraits -->
+           <div class="flex gap-10 mt-20">
+            <!--
+            <div class="size-40 bg-red-200"></div>
+            <div class="size-40 bg-red-200"></div>
+            <div class="size-40 bg-red-200"></div>
+            <div class="size-40 bg-red-200"></div>
+            -->
+          </div>
 
+        </div>
+      </section>
+      
+      <section>
+        <div class="mb-8 min-w-[800px] mx-auto">
+          <!-- footer content -->
+           <p class="text-sm font-light text-gray-300 text-center mb-4">copyright 2025</p>
+        </div>
+      </section>
+
+    </main>
+
+    <script type="text/javascript" src="./animatedConversation.js"></script>
   </body>
 </html>

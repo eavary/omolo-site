@@ -1,9 +1,9 @@
 
 const conversation = [
-  {
-      question: "What is omolo?",
-      answer: "Omolo is the only AI powered SaaS platform built by industry experts, modernizing Automotive regulatory compliance"
-  },
+  // {
+  //     question: "What is omolo?",
+  //     answer: "Omolo is the only AI powered SaaS platform built by industry experts, modernizing Automotive regulatory compliance"
+  // },
   {
       question: "What value does Omolo provide?",
       answer: "Faster time to market. Mitigate risks. Avoid costly mistakes. More efficient use of personnel. Better use of capital."
@@ -18,9 +18,9 @@ const conversation = [
   }
 ]
 
-const messagesContainer = document.getElementById('messages')
+const chatContainer = document.getElementById('chat-container')
+const messagesContainer = document.getElementById('messages-container')
 const chatInput = document.getElementById('chatInput')
-const tagline = document.getElementById('tagline')
 
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms))
@@ -39,7 +39,7 @@ function typeText(element, text) {
 
 function createMessage(text, isUser) {
   const messageWrapper = document.createElement('div')
-  messageWrapper.classList.add('message-container', 'flex')
+  messageWrapper.classList.add('message-wrapper', 'flex')
 
   const messageDiv = document.createElement('div')
   messageDiv.classList.add('message')
@@ -51,6 +51,12 @@ function createMessage(text, isUser) {
   messageDiv.textContent = text
   messageWrapper.appendChild(messageDiv)
   messagesContainer.appendChild(messageWrapper)
+
+  // Scroll to the bottom of the messages container
+  chatContainer.scrollTo({
+    top: messagesContainer.scrollHeight,
+    behavior: 'smooth'
+  })
 
   return messageDiv
 }
@@ -76,7 +82,7 @@ async function animateConversation() {
       await sleep(2000);
 
       // Clear the input
-      chatInput.value = ''
+      // chatInput.value = ''
   }
 }
 
