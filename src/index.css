@@ -33,7 +33,7 @@ section {
   padding: calc(var(--spacing) * 8) 0;
 }
 
-section:nth-child(1) {
+section:nth-child(1), section:last-child {
   /* background: linear-gradient(180deg, #FFF 0%, #092C4C 100%); */
   background: url(./assets/bg-03.jpg) lightgray 50% / cover no-repeat;
 }
