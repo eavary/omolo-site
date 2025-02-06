@@ -34,7 +34,8 @@ section {
 }
 
 section:nth-child(1) {
-  background: linear-gradient(180deg, #FFF 0%, #092C4C 100%);
+  /* background: linear-gradient(180deg, #FFF 0%, #092C4C 100%); */
+  background: url(./assets/bg-03.jpg) lightgray 50% / cover no-repeat;
 }
 
 .chat-container {
