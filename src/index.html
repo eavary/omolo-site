@@ -30,12 +30,18 @@
           <!-- animated conversation container-->
           <div class="flex flex-col gap-2">
             <div id="conversation-wrapper" class="mx-auto mt-3 mb-4 p-3 bg-white rounded-lg shadow-lg 
-              w-full 
-              max-w-[500px] 
+              max-w-[350px] 
               md:max-w-[600px] 
-              lg:max-w-[800px]"
-            >
-              <div id="chat-container" class="p-2 w-full">
+              lg:max-w-[800px]
+              min-h-[140px]
+            ">
+              <div id="chat-container" class="p-2 w-full
+                min-h-[310px]
+                md:min-h-[160px]
+                max-h-[250px]
+                md:max-h-[200px]
+                lg:max-h-[180px]
+              ">
                 <div id="messages-container">
                   <div class="message-wrapper flex">
                     <div class="message user-message visible">

@@ -68,27 +68,24 @@ function createMessage(text, isUser) {
 }
 
 async function animateConversation() {
-  await sleep(3000);
+  await sleep(3000)
 
   for (const [index, exchange] of conversation.entries()) {
       // Type the question
-      await typeText(chatInput, exchange.question);
-      await sleep(500);
+      await typeText(chatInput, exchange.question)
+      await sleep(500)
 
       // Show the question in the message area
-      const questionDiv = createMessage(exchange.question, true);
-      await sleep(100);
-      questionDiv.classList.add('visible');
-      await sleep(1000);
+      const questionDiv = createMessage(exchange.question, true)
+      await sleep(100)
+      questionDiv.classList.add('visible')
+      await sleep(1000)
 
       // Show the answer
-      const answerDiv = createMessage(exchange.answer, false);
-      await sleep(100);
-      answerDiv.classList.add('visible');
-      await sleep(2000);
-
-      // Clear the input
-      // chatInput.value = ''
+      const answerDiv = createMessage(exchange.answer, false)
+      await sleep(100)
+      answerDiv.classList.add('visible')
+      await sleep(3000)
   }
 }
 
