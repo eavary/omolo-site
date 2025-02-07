@@ -7,7 +7,7 @@ export default defineConfig({
   root: 'src',
   build: {
     outDir: '../dist',
-    emptyOutDir: false
+    emptyOutDir: true
   },
   plugins: [
     tailwindcss(),
@@ -16,7 +16,11 @@ export default defineConfig({
         {
           src: 'animatedConversation.js',
           dest: ''
-        }
+        },
+        {
+          src: 'CNAME',
+          dest: ''
+        },
       ]
     })
   ],
