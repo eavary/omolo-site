@@ -68,7 +68,7 @@ function createMessage(text, isUser) {
 }
 
 async function animateConversation() {
-  await sleep(3000)
+  await sleep(4000)
 
   for (const [index, exchange] of conversation.entries()) {
       // Type the question
@@ -79,13 +79,13 @@ async function animateConversation() {
       const questionDiv = createMessage(exchange.question, true)
       await sleep(100)
       questionDiv.classList.add('visible')
-      await sleep(1000)
+      await sleep(3000)
 
       // Show the answer
       const answerDiv = createMessage(exchange.answer, false)
       await sleep(100)
       answerDiv.classList.add('visible')
-      await sleep(3000)
+      await sleep(4000)
   }
 }
 
