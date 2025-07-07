@@ -13,8 +13,12 @@ npm run dev
 
 There's a branch called gh-pages that is used for this trick.
 
-`package.json` has a script registered which will handle deployment:
+`package.json` has scripts registered which will handle deployment:
 
 ```bash
+# first, build the project
+npm run build
+
+# next, deploy it (this triggers a github action that does the things)
 npm run gh-deploy
 ```
